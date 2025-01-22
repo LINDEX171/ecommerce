@@ -8,6 +8,8 @@ import 'package:ecommerce/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:ecommerce/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+
 class TAppTheme {
   TAppTheme._();
 
@@ -33,7 +35,7 @@ class TAppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    primaryColor: Colors.blue,
+    primaryColor: TColors.primary,
     scaffoldBackgroundColor: Colors.black,
     appBarTheme: TAppBarTheme.darkAppBarTheme,
     checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
