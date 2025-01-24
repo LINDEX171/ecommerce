@@ -1,0 +1,19 @@
+1)add the flutter_native_splash package
+flutter pub add flutter_native_splash
+2)on crée un fichier splash.yaml(au niveau du main)
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#000000"
+  image: assets/logos/t-store-splash-logo-black.png
+  image_dark: assets/logos/t-store-splash-logo-white.png
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#000000"
+    image: assets/logos/t-store-splash-logo-black.png
+    image_dark: assets/logos/t-store-splash-logo-white.png
+
+
+  web: false
+
+3)flutter pub run flutter_native_splash:create --path=splash.yaml
