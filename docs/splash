@@ -17,3 +17,7 @@ flutter_native_splash:
   web: false
 
 3)flutter pub run flutter_native_splash:create --path=splash.yaml
+
+
+-------- remove splash screen ------
+4)flutter pub run flutter_native_splash:remove
