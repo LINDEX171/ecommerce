@@ -23,6 +23,7 @@ class OnBoardingDotNavigation extends StatelessWidget {
               activeDotColor: dark ? TColors.white : TColors.dark,
               dotHeight: 6),
           controller: controller.pagecontroller,
+          // onDotClicked: controller.dotNavigationClick,
           count: 3,
         ));
   }
