@@ -1,8 +1,8 @@
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
+import 'package:ecommerce/utils/device/device_utility.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
-import 'package:ecommerce/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -15,15 +15,31 @@ class OnBoardingScreen extends StatelessWidget {
         children: [
           ///horizontal Scrollable page
           PageView(
-            children: [
+            children: const [
               OnBoardingPage(image: TImages.onBoardingImage1,title: TTexts.onBoardingTitle1,subtitle: TTexts.onBoardingSubTitle1,),
               OnBoardingPage(image: TImages.onBoardingImage2,title: TTexts.onBoardingTitle2,subtitle: TTexts.onBoardingSubTitle2,),
               OnBoardingPage(image: TImages.onBoardingImage3,title: TTexts.onBoardingTitle3,subtitle: TTexts.onBoardingSubTitle3,),
             ],
-          )
+          ),
+          OnBoardingSkip()
 
         ],
       ),
+    );
+  }
+}
+
+class OnBoardingSkip extends StatelessWidget {
+  const OnBoardingSkip({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(top: TDeviceUtils.getAppBarHeight(),right:TSizes.defaultSpace,
+      child: TextButton(onPressed: () {
+
+      }, child: const Text("Skip")),
     );
   }
 }
@@ -39,7 +55,7 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(TSizes.defaultSpace),
+      padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(
         children: [
           Image(
@@ -52,7 +68,7 @@ class OnBoardingPage extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height:TSizes.spaceBtwItems,),
+          const SizedBox(height:TSizes.spaceBtwItems,),
           Text(
             subtitle,
             style: Theme.of(context).textTheme.bodyMedium,
