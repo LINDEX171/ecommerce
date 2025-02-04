@@ -1,4 +1,6 @@
 import 'package:ecommerce/common/styles/spacing_styles.dart';
+import 'package:ecommerce/features/authentication/screens/login/widgets/login_form.dart';
+import 'package:ecommerce/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
@@ -21,93 +23,10 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 ///logo , title & subtitle
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image(
-                        height: 150,
-                        image: AssetImage(
-                            dark ? TImages.lightAppLogo : TImages.darkAppLogo)),
-                    Text(
-                      TTexts.loginTitle,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    SizedBox(
-                      height: TSizes.sm,
-                    ),
-                    Text(
-                      TTexts.loginSubTitle,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ],
-                ),
+                TLoginHeader(),
 
                 ///Form
-                Form(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
-                      child: Column(
-                  children: [
-                      ///Email
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Iconsax.direct_right),
-                          labelText: TTexts.email,
-                        ),
-                      ),
-                      SizedBox(
-                        height: TSizes.spaceBtwInputFields,
-                      ),
-
-                      ///Password
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Iconsax.password_check),
-                          labelText: TTexts.password,
-                          suffixIcon: Icon(Iconsax.eye_slash),
-                        ),
-                      ),
-
-                      SizedBox(height: TSizes.spaceBtwInputFields / 2 ,),
-
-                      /// remember me & forget password
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                        ///  remember me
-                          Row(
-                            children: [
-                              Checkbox(value: true, onChanged: (value) {},),
-                              Text(TTexts.rememberMe)
-                            ],
-                          ),
-
-                          ///forget Password
-                          TextButton(onPressed: () {}, child: Text(TTexts.forgetPassword)),
-                        ],
-                      ),
-                      SizedBox(height: TSizes.spaceBtwSections,),
-
-                      ///signing button
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(onPressed: () {
-
-                        }, child: Text(TTexts.signIn)),
-                      ),
-                      SizedBox(height: TSizes.spaceBtwItems,),
-                      ///create account button
-                      SizedBox(
-                        width: double.infinity,
-                        child: OutlinedButton(onPressed: () {
-
-                        }, child: Text(TTexts.createAccount)),
-                      ),
-
-                  ],
-                ),
-                    ),
-                ),
+                TLoginForm(),
 
 
                ///Divider
@@ -123,29 +42,43 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(width: TSizes.spaceBtwSections,),
 
                 ///Footer
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(border: Border.all(color: TColors.grey),borderRadius: BorderRadius.circular(100)),
-                      child: IconButton(onPressed: () {
-                        
-                      }, icon: Image(height: TSizes.iconMd, width: TSizes.iconMd, image: AssetImage(TImages.google))),
-                    ),
-                    SizedBox(width: TSizes.spaceBtwItems,),
-                    Container(
-                      decoration: BoxDecoration(border: Border.all(color: TColors.grey),borderRadius: BorderRadius.circular(100)),
-                      child: IconButton(onPressed: () {
-
-                      }, icon: Image(height: TSizes.iconMd, width: TSizes.iconMd, image: AssetImage(TImages.facebook))),
-                    ),
-
-
-                  ],
-                )
+                TSocialButtons()
               ],
             )),
       ),
     );
   }
 }
+
+class TSocialButtons extends StatelessWidget {
+  const TSocialButtons({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          decoration: BoxDecoration(border: Border.all(color: TColors.grey),borderRadius: BorderRadius.circular(100)),
+          child: IconButton(onPressed: () {
+
+          }, icon: Image(height: TSizes.iconMd, width: TSizes.iconMd, image: AssetImage(TImages.google))),
+        ),
+        SizedBox(width: TSizes.spaceBtwItems,),
+        Container(
+          decoration: BoxDecoration(border: Border.all(color: TColors.grey),borderRadius: BorderRadius.circular(100)),
+          child: IconButton(onPressed: () {
+
+          }, icon: Image(height: TSizes.iconMd, width: TSizes.iconMd, image: AssetImage(TImages.facebook))),
+        ),
+
+
+      ],
+    );
+  }
+}
+
+
+
