@@ -1,12 +1,10 @@
 import 'package:ecommerce/common/widgets/login_signup/form_divider.dart';
 import 'package:ecommerce/common/widgets/login_signup/social_buttons.dart';
 import 'package:ecommerce/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
-import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -18,7 +16,7 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.all(TSizes.defaultSpace),
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
             child: Column(
               children: [
                 ///Title
@@ -26,22 +24,22 @@ class SignupScreen extends StatelessWidget {
                   TTexts.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
 
                 ///Form
-                TSignupForm(),
-                SizedBox(
+                const TSignupForm(),
+                const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
                 ///Divider
-                TFormDivider(deviderText: TTexts.orSignUpWith,),
-                SizedBox(
+                const TFormDivider(deviderText: TTexts.orSignUpWith,),
+                const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
                 /// Social buttons
-                TSocialButtons()
+                const TSocialButtons()
 
               ],
             )),

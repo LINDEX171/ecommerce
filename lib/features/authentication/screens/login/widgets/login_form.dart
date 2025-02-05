@@ -14,30 +14,30 @@ class TLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             ///Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwInputFields,
             ),
 
             ///Password
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash),
               ),
             ),
 
-            SizedBox(height: TSizes.spaceBtwInputFields / 2 ,),
+            const SizedBox(height: TSizes.spaceBtwInputFields / 2 ,),
 
             /// remember me & forget password
             Row(
@@ -47,30 +47,30 @@ class TLoginForm extends StatelessWidget {
                 Row(
                   children: [
                     Checkbox(value: true, onChanged: (value) {},),
-                    Text(TTexts.rememberMe)
+                    const Text(TTexts.rememberMe)
                   ],
                 ),
 
                 ///forget Password
-                TextButton(onPressed: () {}, child: Text(TTexts.forgetPassword),),
+                TextButton(onPressed: () {}, child: const Text(TTexts.forgetPassword),),
               ],
             ),
-            SizedBox(height: TSizes.spaceBtwSections,),
+            const SizedBox(height: TSizes.spaceBtwSections,),
 
             ///signing button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(onPressed: () {
 
-              }, child: Text(TTexts.signIn)),
+              }, child: const Text(TTexts.signIn)),
             ),
-            SizedBox(height: TSizes.spaceBtwItems,),
+            const SizedBox(height: TSizes.spaceBtwItems,),
             ///create account button
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(onPressed: () {
-                 Get.to(SignupScreen());
-              }, child: Text(TTexts.createAccount)),
+                 Get.to(const SignupScreen());
+              }, child: const Text(TTexts.createAccount)),
             ),
 
           ],
