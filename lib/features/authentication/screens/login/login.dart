@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
 
 
                ///Divider
-                TFormDivider(),
+                TFormDivider(deviderText: TTexts.orSignInWith),
 
                 SizedBox(width: TSizes.spaceBtwSections,),
 
