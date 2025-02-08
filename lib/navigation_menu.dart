@@ -1,3 +1,6 @@
+import 'package:ecommerce/features/shop/screens/home/home.dart';
+import 'package:ecommerce/utils/constants/colors.dart';
+import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -8,6 +11,7 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
+    final darkMode = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       bottomNavigationBar: Obx(
@@ -15,6 +19,8 @@ class NavigationMenu extends StatelessWidget {
           height: 80,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
+          backgroundColor: darkMode ? TColors.black : Colors.white,
+          indicatorColor: darkMode ? TColors.black.withOpacity(0.1) : Colors.white.withOpacity(0.1),
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
           destinations: const [
@@ -34,9 +40,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    Container(
-      color: Colors.green,
-    ),
+    const HomeScreen(),
     Container(
       color: Colors.purple,
     ),
