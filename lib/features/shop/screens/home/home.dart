@@ -1,20 +1,25 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce/common/images/t_roundered_image.dart';
+import 'package:ecommerce/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_headers_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
+import 'package:ecommerce/features/shop/controllers/home_controller.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecommerce/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -62,11 +67,7 @@ class HomeScreen extends StatelessWidget {
             ///Body
             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: CarouselSlider(items: [
-                TRoundedImage(imageUrl: TImages.promoBanner1, ),
-                TRoundedImage(imageUrl: TImages.promoBanner2, ),
-                TRoundedImage(imageUrl: TImages.promoBanner3, ),
-              ], options: CarouselOptions(viewportFraction: 1)),
+              child: TPromoSlider(),
             )
           ],
         ),
@@ -74,5 +75,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
