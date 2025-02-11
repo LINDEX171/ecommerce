@@ -4,10 +4,21 @@ import 'package:flutter/material.dart';
 
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
-    super.key, this.width, this.height, required this.imageUrl, this.applyImageRadius=false, this.border, this.backgroundColor=TColors.light, this.fit=BoxFit.contain, this.padding,this.isNetworkImage=false, this.onPressed, this.borderRadius,
+    super.key,
+    this.width,
+    this.height,
+    required this.imageUrl,
+    this.applyImageRadius = false,
+    this.border,
+    this.backgroundColor = TColors.light,
+    this.fit = BoxFit.contain,
+    this.padding,
+    this.isNetworkImage = false,
+    this.onPressed,
+    this.borderRadius,
   });
 
-  final double? width,height;
+  final double? width, height;
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
@@ -31,8 +42,15 @@ class TRoundedImage extends StatelessWidget {
             color: backgroundColor,
             borderRadius: BorderRadius.circular(TSizes.md)),
         child: ClipRRect(
-            borderRadius: applyImageRadius ? BorderRadius.circular(TSizes.md): BorderRadius.zero,
-            child: Image(image: isNetworkImage ? NetworkImage(imageUrl): AssetImage(imageUrl) as ImageProvider,fit: BoxFit.contain,)),
+            borderRadius: applyImageRadius
+                ? BorderRadius.circular(TSizes.md)// Si applyImageRadius est vrai, on applique un arrondi
+                : BorderRadius.zero,// Sinon, pas d'arrondi
+            child: Image(
+              image: isNetworkImage
+                  ? NetworkImage(imageUrl)
+                  : AssetImage(imageUrl) as ImageProvider,
+              fit: BoxFit.contain,
+            )),
       ),
     );
   }
