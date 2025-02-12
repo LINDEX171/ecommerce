@@ -2,6 +2,7 @@ import 'package:ecommerce/common/images/t_roundered_image.dart';
 import 'package:ecommerce/common/styles/shadows.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
+import 'package:ecommerce/common/widgets/text/product_price_text.dart';
 import 'package:ecommerce/common/widgets/text/product_title_text.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
@@ -107,10 +108,9 @@ class TProductCardVertical extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("\$35.5",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.headlineMedium),
+
+                      ///Price
+                     const TProductPriceText(price: "35.0", isLarge: true),
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,
