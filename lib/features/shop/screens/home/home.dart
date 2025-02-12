@@ -1,5 +1,6 @@
 import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_headers_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/product_card_vertical.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
@@ -13,13 +14,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             ///HEADER
 
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// APP-BAR
@@ -58,19 +59,26 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
             ///Body
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(),
-                  SizedBox(
+                  const TPromoSlider(),
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  TProductCardVertical()
+
+                  ///GRiedview PROductcard
+                  TGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) =>
+                        ///PROductcard Vertical
+                        TProductCardVertical(),
+                  )
                 ],
               ),
-
             )
           ],
         ),
@@ -78,7 +86,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
