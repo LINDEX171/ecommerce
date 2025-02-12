@@ -13,13 +13,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             ///HEADER
 
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// APP-BAR
@@ -58,19 +58,34 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
             ///Body
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(),
-                  SizedBox(
+                  const TPromoSlider(),
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  TProductCardVertical()
+
+                  ///GRiedview PROductcard
+                  GridView.builder(
+                    itemCount: 4,
+                    shrinkWrap: true,
+                    padding: EdgeInsets.zero,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: TSizes.gridViewSpacing,
+                        mainAxisSpacing: TSizes.gridViewSpacing,
+                        mainAxisExtent: 300),
+                    itemBuilder: (_, index) =>
+                    /// PROductcard
+                    const TProductCardVertical(),
+                  ),
                 ],
               ),
-
             )
           ],
         ),
@@ -78,7 +93,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
