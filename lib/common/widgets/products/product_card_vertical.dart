@@ -105,12 +105,13 @@ class TProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(height: TSizes.spaceBtwItems,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 
                       ///Price
-                     const TProductPriceText(price: "35.0", isLarge: true),
+                     const TProductPriceText(price: "1000", isLarge: false),
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,

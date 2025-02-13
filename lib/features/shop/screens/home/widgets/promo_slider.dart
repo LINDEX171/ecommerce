@@ -19,7 +19,7 @@ class TPromoSlider extends StatelessWidget {
     return Column(
       children: [
         CarouselSlider(
-            items: [
+            items: const [
               TRoundedImage(
                 imageUrl: TImages.promoBanner1,
               ),
@@ -47,7 +47,7 @@ class TPromoSlider extends StatelessWidget {
                     backgroundColor: controller.carouselCurentIndex.value== i ? TColors.primary :TColors.grey,
                     height: 4,
                     width: 20,
-                    margin: EdgeInsets.only(right: 10)),
+                    margin: const EdgeInsets.only(right: 10)),
             ],
           ),
         )

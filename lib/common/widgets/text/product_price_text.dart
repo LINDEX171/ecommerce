@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TProductPriceText extends StatelessWidget {
   const TProductPriceText(
       {super.key,
-        this.currencySign="cfa",
+        this.currencySign="fcfa",
       required this.price,
        this.maxLines = 1,
       required this.isLarge,
@@ -17,7 +17,7 @@ class TProductPriceText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(currencySign + price,
+    return Text(price + currencySign,
         maxLines: maxLines,
         overflow: TextOverflow.ellipsis,
         style: isLarge ? Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough:null)
