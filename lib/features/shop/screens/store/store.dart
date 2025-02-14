@@ -1,12 +1,15 @@
 import 'package:ecommerce/common/images/t_circular_image.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
+import 'package:ecommerce/common/widgets/brands/brand_card.dart';
+import 'package:ecommerce/common/widgets/brands/brand_show_case.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/products_cart/cart_menu_icon.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
 import 'package:ecommerce/common/widgets/text/t_brand_title_text_with_verified_icon.dart';
+import 'package:ecommerce/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/enums.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
@@ -19,10 +22,12 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(length: 5,
+    return DefaultTabController(
+      length: 5,
       child: Scaffold(
         appBar: TAppBar(
-          title: Text("Store", style: Theme.of(context).textTheme.headlineMedium),
+          title:
+              Text("Store", style: Theme.of(context).textTheme.headlineMedium),
           actions: [
             TCartCounterIcon(
               onPressed: () {},
@@ -117,7 +122,7 @@ class StoreScreen extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        TBrandTitleWithVerifiedIcon(
+                                        const TBrandTitleWithVerifiedIcon(
                                             title: "nike",
                                             brandTextSize: TextSizes.large),
                                         Text(
@@ -141,19 +146,39 @@ class StoreScreen extends StatelessWidget {
                 ),
 
                 ///Tabs
-                bottom:  TTabBar(tabs: [
-                  Tab(child: Text("Sports"),),
-                  Tab(child: Text("Furniture"),),
-                  Tab(child: Text("Electronics"),),
-                  Tab(child: Text("Clothes"),),
-                  Tab(child: Text("Cosmetics"),),
+                bottom: const TTabBar(tabs: [
+                  Tab(
+                    child: Text("Sports"),
+                  ),
+                  Tab(
+                    child: Text("Furniture"),
+                  ),
+                  Tab(
+                    child: Text("Electronics"),
+                  ),
+                  Tab(
+                    child: Text("Clothes"),
+                  ),
+                  Tab(
+                    child: Text("Cosmetics"),
+                  ),
                 ]),
               )
             ];
           },
-          body: Container(), // Contenu principal de la page
+          body: const TabBarView(children: [
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+          ]), // Contenu principal de la page
         ),
       ),
     );
   }
 }
+
+
+
+
