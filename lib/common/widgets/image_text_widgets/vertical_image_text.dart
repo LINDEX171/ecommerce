@@ -5,10 +5,15 @@ import 'package:flutter/material.dart';
 
 class TVerticalImageText extends StatelessWidget {
   const TVerticalImageText({
-    super.key, required this.image, required this.title, this.textColor=TColors.white, this.backgroundColor=TColors.white, this.onTap,
+    super.key,
+    required this.image,
+    required this.title,
+    this.textColor = TColors.white,
+    this.backgroundColor,
+    this.onTap,
   });
 
-  final String image,title;
+  final String image, title;
   final Color? textColor;
   final Color? backgroundColor;
   final void Function()? onTap;
@@ -18,8 +23,7 @@ class TVerticalImageText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(
-            right: TSizes.defaultSpace),
+        padding: const EdgeInsets.only(right: TSizes.defaultSpace),
         child: Column(
           children: [
             ///Circular Icon
@@ -28,14 +32,14 @@ class TVerticalImageText extends StatelessWidget {
               height: 56,
               padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
-                  color: backgroundColor ?? (dark ? TColors.black: TColors.white),
-                  borderRadius:
-                  BorderRadius.circular(100)),
-              child:  Center(
+                  color:
+                      backgroundColor ?? (dark ? TColors.black : TColors.white),
+                  borderRadius: BorderRadius.circular(100)),
+              child: Center(
                 child: Image(
                     image: AssetImage(image),
                     fit: BoxFit.cover,
-                    color: dark ? TColors.light:TColors.dark),
+                    color: dark ? TColors.light : TColors.dark),
               ),
             ),
             const SizedBox(

@@ -35,7 +35,7 @@ class TCircularIcon extends StatelessWidget {
                 ? TColors.black.withOpacity(0.9)// Si le mode sombre est activé, utilise du noir avec une opacité de 90%.
                 : TColors.white.withOpacity(0.9),// Sinon, utilise du blanc avec une opacité de 90%.
       ),
-      child: IconButton(onPressed: onPressed, icon: Icon(Iconsax.heart5,color: color,size: size,)),
+      child: IconButton(onPressed: onPressed, icon: Icon(icon,color: color,size: size,)),
     );
   }
 }
