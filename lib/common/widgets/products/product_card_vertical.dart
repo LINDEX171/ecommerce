@@ -88,8 +88,8 @@ class TProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  TBrandTitleWithVerifiedIcon(title: "nike"),
-                  SizedBox(height: TSizes.spaceBtwItems,),
+                  const TBrandTitleWithVerifiedIcon(title: "nike"),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                     itemCount: 4,
                     itemBuilder: (_, index) =>
                         ///PROductcard Vertical
-                        TProductCardVertical(),
+                        const TProductCardVertical(),
                   ),
 
 

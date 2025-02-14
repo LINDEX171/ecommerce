@@ -1,7 +1,6 @@
 import 'package:ecommerce/common/widgets/brands/brand_card.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +18,12 @@ class TBrandShowcase extends StatelessWidget {
     return TRoundedContainer(
       showBorder: true,
       borderColor: TColors.darkGrey,
-      padding: EdgeInsets.all(TSizes.md),
-      margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      padding: const EdgeInsets.all(TSizes.md),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Column(
         children: [
           ///Brands with products count
-          TBrandCard(showBorder: true),
+          const TBrandCard(showBorder: true),
           const SizedBox(height: TSizes.spaceBtwItems,),
           ///Brand top 3 product images
           Row(
@@ -38,8 +37,8 @@ class TBrandShowcase extends StatelessWidget {
   Widget brandTopProductImageWidget(String image,context){
     return Expanded(child: TRoundedContainer(
       height: 100,
-      padding: EdgeInsets.all(TSizes.md),
-      margin: EdgeInsets.only(right: TSizes.sm),
+      padding: const EdgeInsets.all(TSizes.md),
+      margin: const EdgeInsets.only(right: TSizes.sm),
       backgroundColor: THelperFunctions.isDarkMode(context)?TColors.darkGrey:TColors.light,
       child: Image(image: AssetImage(image),fit: BoxFit.contain),
     ));

@@ -1,8 +1,6 @@
 import 'package:ecommerce/common/images/t_circular_image.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
-import 'package:ecommerce/common/widgets/brands/brand_card.dart';
-import 'package:ecommerce/common/widgets/brands/brand_show_case.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';

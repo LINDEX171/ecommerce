@@ -27,7 +27,7 @@ class TBrandTitleWithVerifiedIcon extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
        Flexible(child: TBrandTitleText(title: title,color: textColor,maxLines: maxLines,textAlign: textAlign,brandTextSize: brandTextSize,)),
-        SizedBox(width: TSizes.xs,),
+        const SizedBox(width: TSizes.xs,),
         Icon(Iconsax.verify5,color: iconColor,size: TSizes.iconXs,)
       ],
     );
