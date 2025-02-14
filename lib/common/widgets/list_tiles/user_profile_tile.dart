@@ -12,7 +12,7 @@ class TUserProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: TRoundedImage(
+      leading: const TRoundedImage(
         imageUrl: TImages.user,
         width: 50,
         height: 50,
@@ -31,7 +31,7 @@ class TUserProfileTile extends StatelessWidget {
             .bodyMedium!
             .apply(color: TColors.white),
       ),
-      trailing: IconButton(onPressed: () {}, icon: Icon(Iconsax.edit,color: TColors.white,)),
+      trailing: IconButton(onPressed: () {}, icon: const Icon(Iconsax.edit,color: TColors.white,)),
     );
   }
 }

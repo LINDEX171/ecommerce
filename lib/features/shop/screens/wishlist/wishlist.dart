@@ -23,10 +23,10 @@ class FavouriteScreen extends StatelessWidget {
             TCircularIcon(icon: Iconsax.add,onPressed: () => Get.to(const HomeScreen()),)
           ]),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           children: [
-            TGridLayout(itemCount: 6, itemBuilder: (_, index) => TProductCardVertical() ,)
+            TGridLayout(itemCount: 6, itemBuilder: (_, index) => const TProductCardVertical() ,)
           ],
         ),
       ),
