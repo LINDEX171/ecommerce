@@ -1,10 +1,13 @@
 import 'package:ecommerce/common/images/t_roundered_image.dart';
+import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/curved_edges/curved_edges_wiidget.dart';
+import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({super.key});
@@ -56,6 +59,14 @@ class ProductDetail extends StatelessWidget {
                             itemCount: 4),
                       ),
                     ),
+
+                    ///AppBar Icons
+                    TAppBar(
+                      showBackArrow: true,
+                      actions: [
+                        TCircularIcon(icon: Iconsax.heart5,color: Colors.red,)
+                      ],
+                    )
                   ],
                 ),
               ),
