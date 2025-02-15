@@ -1,4 +1,3 @@
-import 'package:ecommerce/app.dart';
 import 'package:ecommerce/common/images/t_roundered_image.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
@@ -14,10 +13,10 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(showBackArrow: true, title: Text("Profile")),
+      appBar: const TAppBar(showBackArrow: true, title: Text("Profile")),
       body: SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.all(TSizes.defaultSpace),
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
 
             child: Column(
               children: [
@@ -26,33 +25,33 @@ class ProfileScreen extends StatelessWidget {
                   width: double.infinity,
                   child: Column(
                     children: [
-                      TRoundedImage(imageUrl: TImages.user,width: 80,height: 80,),
-                      TextButton(onPressed: () { }, child: Text("Change Profile Picture")),
+                      const TRoundedImage(imageUrl: TImages.user,width: 80,height: 80,),
+                      TextButton(onPressed: () { }, child: const Text("Change Profile Picture")),
 
                     ],
                   ),
                 ),
 
                 ///Details
-                SizedBox(height: TSizes.spaceBtwItems / 2,),
+                const SizedBox(height: TSizes.spaceBtwItems / 2,),
 
-                Divider(),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const Divider(),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
                 ///Heading profile info
-                TSectionHeading(title: "Profile information",showActionButton: false,),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const TSectionHeading(title: "Profile information",showActionButton: false,),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
 
                 TProfileMenu(title: "Name",value: "Lindexdev",onPressed: () {},),
                 TProfileMenu(title: "Username",value: "Lindexdev",onPressed: () {},),
-                SizedBox(height: TSizes.spaceBtwItems,),
-                Divider(),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const SizedBox(height: TSizes.spaceBtwItems,),
+                const Divider(),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
                 ///Heading Personal Info
-                TSectionHeading(title: "Personal Information",showActionButton: false,),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const TSectionHeading(title: "Personal Information",showActionButton: false,),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
                 TProfileMenu(onPressed: () {}, title: "User ID", value: "2723",icon: Iconsax.copy),
                 TProfileMenu(onPressed: () {}, title: "E-mail", value: "lindex171@gmail.com"),
@@ -60,10 +59,10 @@ class ProfileScreen extends StatelessWidget {
                 TProfileMenu(onPressed: () {}, title: "Gender", value: "Male"),
                 TProfileMenu(onPressed: () {}, title: "Date of birth", value: "17/06/2010"),
                 const Divider(),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
                 Center(
-                  child: TextButton(onPressed: () {}, child: Text("Close Account",style: TextStyle(color: Colors.red),)),
+                  child: TextButton(onPressed: () {}, child: const Text("Close Account",style: TextStyle(color: Colors.red),)),
                 )
               ],
             ),
