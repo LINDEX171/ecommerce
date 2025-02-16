@@ -2,6 +2,9 @@ import 'package:ecommerce/common/images/t_roundered_image.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/curved_edges/curved_edges_wiidget.dart';
 import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
+import 'package:ecommerce/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:ecommerce/features/shop/screens/product_details/widgets/product_meta_data.dart';
+import 'package:ecommerce/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
@@ -20,56 +23,26 @@ class ProductDetail extends StatelessWidget {
         child: Column(
           children: [
             ///Product Image Slider
-            TCurvedEdgeWidget(
-              child: Container(
-                color: dark ? TColors.darkGrey : TColors.light,
-                child: Stack(
-                  children: [
-                    ///Main large Image
-                    SizedBox(
-                        height: 400,
-                        child: Padding(
-                          padding: const EdgeInsets.all(
-                              TSizes.productImageRadius * 2),
-                          child: Center(
-                              child: Image(
-                                  image: AssetImage(TImages.productImage5))),
-                        )),
+            TProductImageSlider(),
 
-                    ///Image slider
-                    Positioned(
-                      right: 0,
-                      bottom: 30,
-                      left: TSizes.defaultSpace,
-                      child: SizedBox(
-                        height: 80,
-                        child: ListView.separated(
-                           shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            physics: AlwaysScrollableScrollPhysics(),
-                            itemBuilder: (_, index) => TRoundedImage(
-                                width: 80,
-                                imageUrl: TImages.productImage3,
-                                backgroundColor:
-                                    dark ? TColors.dark : TColors.white,
-                                border: Border.all(color: TColors.primary),
-                                padding: EdgeInsets.all(TSizes.sm)),
-                            separatorBuilder: (_, __) =>
-                                const SizedBox(width: TSizes.spaceBtwItems),
-                            itemCount: 4),
-                      ),
-                    ),
-
-                    ///AppBar Icons
-                    TAppBar(
-                      showBackArrow: true,
-                      actions: [
-                        TCircularIcon(icon: Iconsax.heart5,color: Colors.red,)
-                      ],
-                    )
-                  ],
-                ),
-              ),
+            ///Product details
+            Padding(padding: EdgeInsets.only(
+              right: TSizes.defaultSpace,
+              left: TSizes.defaultSpace,
+              bottom: TSizes.defaultSpace,
+            ),
+            child: Column(
+              children: [
+                ///Rating & share
+                TRatingAndShare(),
+                ///Price,Title,Stack, & Brand
+                TProductMetaData()
+                ///Attributes
+                ///Checkout Button
+                ///Description
+                ///Reviews
+              ],
+            ),
             )
           ],
         ),
@@ -77,3 +50,7 @@ class ProductDetail extends StatelessWidget {
     );
   }
 }
+
+
+
+
