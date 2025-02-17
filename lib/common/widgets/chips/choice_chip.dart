@@ -34,13 +34,13 @@ class TChoiceChip extends StatelessWidget {
           : null,
       /// La forme du chip : Si 'isColor' est vrai, le chip a une forme circulaire (CircleBorder).
       /// Sinon, il conserve la forme par défaut (valeur null).
-      shape: isColor ? CircleBorder() : null,
+      shape: isColor ? const CircleBorder() : null,
       /// Padding du label : Si 'isColor' est vrai, il est défini à 0 pour ne pas avoir d'espace autour du label.
       /// Sinon, cette propriété n'est pas définie (valeur null).
-      labelPadding: isColor ? EdgeInsets.all(0) : null,
+      labelPadding: isColor ? const EdgeInsets.all(0) : null,
       /// Padding général du chip : Si 'isColor' est vrai, il est défini à 0 pour minimiser l'espace interne.
       /// Sinon, cette propriété n'est pas définie (valeur null).
-      padding: isColor ? EdgeInsets.all(0) : null,
+      padding: isColor ? const EdgeInsets.all(0) : null,
       /// Couleur de fond : Si 'isColor' est vrai, la couleur de fond est déterminée par la fonction
       /// 'THelperFunctions.getColor(text)' qui récupère une couleur en fonction du texte.
       /// Si 'isColor' est faux, il n'y a pas de couleur de fond (valeur null).
