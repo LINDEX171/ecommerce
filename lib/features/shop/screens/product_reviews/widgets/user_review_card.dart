@@ -21,7 +21,7 @@ class TUserReviewCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     backgroundImage: AssetImage(TImages.userProfileImage1),
                   ),
                   const SizedBox(
@@ -33,7 +33,7 @@ class TUserReviewCard extends StatelessWidget {
                   )
                 ],
               ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
             ],
           ),
           const SizedBox(
@@ -41,7 +41,7 @@ class TUserReviewCard extends StatelessWidget {
           ),
           Row(
             children: [
-              TRatingBarIndicator(rating: 4),
+              const TRatingBarIndicator(rating: 4),
               const SizedBox(
                 width: TSizes.spaceBtwItems,
               ),
@@ -54,7 +54,7 @@ class TUserReviewCard extends StatelessWidget {
           const SizedBox(
             height: TSizes.spaceBtwItems,
           ),
-          ReadMoreText(
+          const ReadMoreText(
             "the user interface at the app is quite intuitive, iwas able to navigate and make puschases seamlessly, great job",
             trimLines: 1,
             trimMode: TrimMode.Line,
@@ -77,7 +77,7 @@ class TUserReviewCard extends StatelessWidget {
           TRoundedContainer(
             backgroundColor: dark ? TColors.darkGrey : TColors.grey,
             child: Padding(
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 child: Column(
                   children: [
                     Row(
@@ -96,7 +96,7 @@ class TUserReviewCard extends StatelessWidget {
                     const SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
-                    ReadMoreText(
+                    const ReadMoreText(
                       "the user interface at the app is quite intuitive, iwas able to navigate and make puschases seamlessly, great job",
                       trimLines: 1,
                       trimMode: TrimMode.Line,
@@ -114,7 +114,7 @@ class TUserReviewCard extends StatelessWidget {
                   ],
                 )),
           ),
-          SizedBox(height: TSizes.spaceBtwSections,),
+          const SizedBox(height: TSizes.spaceBtwSections,),
 
         ],
       ),

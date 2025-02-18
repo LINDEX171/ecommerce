@@ -14,7 +14,7 @@ class TRatingBarIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return RatingBarIndicator(
       itemBuilder: (_, __) =>
-          Icon(Iconsax.star1, color: TColors.primary),
+          const Icon(Iconsax.star1, color: TColors.primary),
       rating: rating,
       itemSize: 20,
       unratedColor: TColors.grey,

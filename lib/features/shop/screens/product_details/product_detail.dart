@@ -58,7 +58,7 @@ class ProductDetail extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TSectionHeading(title: "Reviews(99)",onPressed: () {},showActionButton: false),
-                    IconButton(onPressed: () => Get.to(() =>ProductReviewsScreen()), icon: const Icon(Iconsax.arrow_right_3,size: 18),)
+                    IconButton(onPressed: () => Get.to(() =>const ProductReviewsScreen()), icon: const Icon(Iconsax.arrow_right_3,size: 18),)
                   ],
                 ),
                 const SizedBox(height: TSizes.spaceBtwSections,),

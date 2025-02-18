@@ -15,7 +15,7 @@ class TOverallProductRating extends StatelessWidget {
             style: Theme.of(context).textTheme.displayLarge,
           ),
         ),
-        Expanded(
+        const Expanded(
           flex: 7,
           child: Column(
             children: [
