@@ -25,6 +25,7 @@ class TRatingProgressIndicator extends StatelessWidget {
             child: SizedBox(
                 width:
                 THelperFunctions.screenWidth() * 0.5,
+                ///Linear progress indicator
                 child: LinearProgressIndicator(
                   value: value,
                   minHeight: 11,
