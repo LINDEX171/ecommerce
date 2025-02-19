@@ -1,17 +1,9 @@
-import 'package:ecommerce/common/images/t_roundered_image.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
-import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
 import 'package:ecommerce/common/widgets/products/cart/add_remove_button.dart';
 import 'package:ecommerce/common/widgets/products/cart/cart__item.dart';
 import 'package:ecommerce/common/widgets/text/product_price_text.dart';
-import 'package:ecommerce/common/widgets/text/product_title_text.dart';
-import 'package:ecommerce/common/widgets/text/t_brand_title_text_with_verified_icon.dart';
-import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
-import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -26,13 +18,13 @@ class CartScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineSmall,
           )),
       body: Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ListView.separated(
       shrinkWrap: true,
       separatorBuilder: (_, __) =>
-          SizedBox(height: TSizes.spaceBtwSections),
+          const SizedBox(height: TSizes.spaceBtwSections),
       itemCount: 10,
-      itemBuilder: (_, index) => Column(children: [
+      itemBuilder: (_, index) => const Column(children: [
         TCartItem(),
         SizedBox(
           height: TSizes.spaceBtwItems,
@@ -56,7 +48,7 @@ class CartScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ElevatedButton(onPressed: () {}, child: Text("Checkout 3500Fcfa")),
+        child: ElevatedButton(onPressed: () {}, child: const Text("Checkout 3500Fcfa")),
       ),
     );
   }

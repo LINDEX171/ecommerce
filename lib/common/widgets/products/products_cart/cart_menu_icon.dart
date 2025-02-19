@@ -16,7 +16,7 @@ class TCartCounterIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      IconButton(onPressed: () =>Get.to(() =>CartScreen()) , icon:  Icon(Iconsax.shopping_bag,color: iconColor,)),
+      IconButton(onPressed: () =>Get.to(() =>const CartScreen()) , icon:  Icon(Iconsax.shopping_bag,color: iconColor,)),
       Positioned(
         right: 0,
         child: Container(

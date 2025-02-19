@@ -14,7 +14,7 @@ class TProductQuantityWithAddRemove extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 70),
+        const SizedBox(width: 70),
         ///Add Remove Button
         Row(
           mainAxisSize: MainAxisSize.min,
@@ -30,10 +30,10 @@ class TProductQuantityWithAddRemove extends StatelessWidget {
                 ? TColors.darkGrey
                 : TColors.light,
             ),
-            SizedBox(width: TSizes.spaceBtwItems,),
+            const SizedBox(width: TSizes.spaceBtwItems,),
             Text("2",style: Theme.of(context).textTheme.titleSmall,),
-            SizedBox(width: TSizes.spaceBtwItems,),
-            TCircularIcon(
+            const SizedBox(width: TSizes.spaceBtwItems,),
+            const TCircularIcon(
               icon: Iconsax.add,
               width: 32,
               height: 32,
