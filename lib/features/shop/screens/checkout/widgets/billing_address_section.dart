@@ -12,19 +12,19 @@ class TBillingAddressSection extends StatelessWidget {
       children: [
         TSectionHeading(title: "Shipping Address",buttonTitle: "Change",onPressed: () {},),
         Text("Lindex Dev",style: Theme.of(context).textTheme.bodyLarge,),
-        SizedBox(height: TSizes.spaceBtwItems/2,),
+        const SizedBox(height: TSizes.spaceBtwItems/2,),
         Row(
           children: [
-            Icon(Icons.phone,color: Colors.grey,size: 16,),
-            SizedBox(width: TSizes.spaceBtwItems,),
+            const Icon(Icons.phone,color: Colors.grey,size: 16,),
+            const SizedBox(width: TSizes.spaceBtwItems,),
             Text("+221774191926",style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems/2,),
+        const SizedBox(height: TSizes.spaceBtwItems/2,),
         Row(
           children: [
-            Icon(Icons.location_history,color: Colors.grey,size: 16,),
-            SizedBox(width: TSizes.spaceBtwItems,),
+            const Icon(Icons.location_history,color: Colors.grey,size: 16,),
+            const SizedBox(width: TSizes.spaceBtwItems,),
             Text("Dakar senegal fass mbao",style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),

@@ -17,7 +17,7 @@ class TOrderListItems extends StatelessWidget {
         itemBuilder: (_, index) => TRoundedContainer(
               showBorder: true,
               backgroundColor: dark ? TColors.dark : TColors.light,
-              padding: EdgeInsets.all(TSizes.md),
+              padding: const EdgeInsets.all(TSizes.md),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,8 +26,8 @@ class TOrderListItems extends StatelessWidget {
                   Row(
                     children: [
                       ///1-Icon
-                      Icon(Iconsax.ship),
-                      SizedBox(
+                      const Icon(Iconsax.ship),
+                      const SizedBox(
                         width: TSizes.spaceBtwItems / 2,
                       ),
 
@@ -57,7 +57,7 @@ class TOrderListItems extends StatelessWidget {
                       ///3- Icon
                       IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Iconsax.arrow_right_34,
                             size: TSizes.iconSm,
                           ))
@@ -72,8 +72,8 @@ class TOrderListItems extends StatelessWidget {
                         child: Row(
                           children: [
                             ///1-Icon
-                            Icon(Iconsax.tag),
-                            SizedBox(
+                            const Icon(Iconsax.tag),
+                            const SizedBox(
                               width: TSizes.spaceBtwItems / 2,
                             ),
 
@@ -108,8 +108,8 @@ class TOrderListItems extends StatelessWidget {
                         child: Row(
                           children: [
                             ///1-Icon
-                            Icon(Iconsax.calendar),
-                            SizedBox(
+                            const Icon(Iconsax.calendar),
+                            const SizedBox(
                               width: TSizes.spaceBtwItems / 2,
                             ),
 
@@ -145,7 +145,7 @@ class TOrderListItems extends StatelessWidget {
                 ],
               ),
             ),
-        separatorBuilder: (_, __) => SizedBox(height: TSizes.spaceBtwItems),
+        separatorBuilder: (_, __) => const SizedBox(height: TSizes.spaceBtwItems),
         );
   }
 }

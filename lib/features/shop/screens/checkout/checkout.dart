@@ -28,29 +28,29 @@ class CheckoutScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               ///Items in cart
-              TCartItems(
+              const TCartItems(
                 showAddRemoveButtons: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
 
               ///Coupon TextField
-              TCouponCode(),
+              const TCouponCode(),
 
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
               ///Billing Section
               TRoundedContainer(
                 showBorder: true,
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 backgroundColor: dark ? TColors.black:TColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     ///Pricing
                     TBillingAmountSection(),
@@ -72,7 +72,7 @@ class CheckoutScreen extends StatelessWidget {
       ),   ///Checkout button
       bottomNavigationBar: Padding(
     padding: const EdgeInsets.all(TSizes.defaultSpace),
-    child: ElevatedButton(onPressed: () => Get.to(() => SuccessScreen(image: TImages.successfulPaymentIcon, title: "Payment Success", subtitle: "Your item will be shipped soon", onPressed: () =>  Get.offAll(() =>NavigationMenu()))), child: const Text("Checkout 3500Fcfa")),
+    child: ElevatedButton(onPressed: () => Get.to(() => SuccessScreen(image: TImages.successfulPaymentIcon, title: "Payment Success", subtitle: "Your item will be shipped soon", onPressed: () =>  Get.offAll(() =>const NavigationMenu()))), child: const Text("Checkout 3500Fcfa")),
     ),
     );
   }

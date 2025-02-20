@@ -21,13 +21,13 @@ class TCartItems extends StatelessWidget {
       itemCount: 2,
       itemBuilder: (_, index) =>  Column(children: [
         ///Cart Item
-        TCartItem(),
-       if(showAddRemoveButtons) SizedBox(
+        const TCartItem(),
+       if(showAddRemoveButtons) const SizedBox(
           height: TSizes.spaceBtwItems,
         ),
 
         ///Add Remove Button Row with Total Price
-        if(showAddRemoveButtons) Row(
+        if(showAddRemoveButtons) const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(

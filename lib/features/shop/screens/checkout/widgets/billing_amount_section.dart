@@ -15,7 +15,7 @@ class TBillingAmountSection extends StatelessWidget {
             Text("Subtotal",style: Theme.of(context).textTheme.bodyMedium,),
             Text("1250 fcfa",style: Theme.of(context).textTheme.bodyMedium,),
           ],),
-        SizedBox(height: TSizes.spaceBtwItems / 2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2,),
         ///Shipping fee
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,7 +23,7 @@ class TBillingAmountSection extends StatelessWidget {
             Text("Shipping fee",style: Theme.of(context).textTheme.bodyMedium,),
             Text("3500",style: Theme.of(context).textTheme.labelLarge,),
           ],),
-        SizedBox(height: TSizes.spaceBtwItems / 2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2,),
         ///Tax fee
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +31,7 @@ class TBillingAmountSection extends StatelessWidget {
             Text("Tax fee",style: Theme.of(context).textTheme.bodyMedium,),
             Text("3500",style: Theme.of(context).textTheme.labelLarge,),
           ],),
-        SizedBox(height: TSizes.spaceBtwItems / 2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2,),
         ///Order Total
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
