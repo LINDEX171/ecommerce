@@ -23,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
 
     ///Container with side,paddings,color,edges,radius and shadow
     return GestureDetector(
-      onTap: () => Get.to(() =>const ProductDetail()),
+      onTap: () => Get.to(() => const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -89,13 +89,14 @@ class TProductCardVertical extends StatelessWidget {
                     height: TSizes.spaceBtwItems / 2,
                   ),
                   const TBrandTitleWithVerifiedIcon(title: "nike"),
-                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       ///Price
-                     const TProductPriceText(price: "1000", isLarge: false),
+                      const TProductPriceText(price: "1000", isLarge: false),
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,
@@ -125,5 +126,3 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
-
-
