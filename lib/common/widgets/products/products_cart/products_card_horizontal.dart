@@ -1,10 +1,8 @@
 import 'package:ecommerce/common/images/t_roundered_image.dart';
-import 'package:ecommerce/common/styles/shadows.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
 import 'package:ecommerce/common/widgets/text/product_price_text.dart';
 import 'package:ecommerce/common/widgets/text/product_title_text.dart';
-import 'package:ecommerce/common/widgets/text/t_brand_title_text.dart';
 import 'package:ecommerce/common/widgets/text/t_brand_title_text_with_verified_icon.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
@@ -29,12 +27,12 @@ class TProductCardHorizontal extends StatelessWidget {
         ///Thumbnail
         TRoundedContainer(
           height: 120,
-          padding: EdgeInsets.all(TSizes.sm),
+          padding: const EdgeInsets.all(TSizes.sm),
           backgroundColor: dark ? TColors.dark : TColors.light,
           child: Stack(
             children: [
               ///Thumbnail Image
-              SizedBox(
+              const SizedBox(
                 height: 120,
                 width: 120,
                 child: TRoundedImage(
@@ -60,7 +58,7 @@ class TProductCardHorizontal extends StatelessWidget {
               ),
 
               ///Favorite iconbutton
-              Positioned(
+              const Positioned(
                 top: 0,
                 right: 0,
                 child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
@@ -74,7 +72,7 @@ class TProductCardHorizontal extends StatelessWidget {
           width: 172,
           child: Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: TSizes.sm, left: TSizes.sm),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,17 +93,17 @@ class TProductCardHorizontal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ///Price
-                  Flexible(child: TProductPriceText(price: "230uh hjjy hi0")),
+                  const Flexible(child: TProductPriceText(price: "230uh hjjy hi0")),
 
                   ///Add to cart Button
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: TColors.dark,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(TSizes.cardRadiusMd),
                             bottomRight:
                                 Radius.circular(TSizes.productImageRadius))),
-                    child: SizedBox(
+                    child: const SizedBox(
                         width: TSizes.iconLg * 1.2,
                         height: TSizes.iconLg * 1.2,
                         child: Center(

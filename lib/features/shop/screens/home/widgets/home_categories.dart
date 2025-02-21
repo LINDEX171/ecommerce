@@ -18,7 +18,7 @@ class THomeCategories extends StatelessWidget {
         itemCount: 8,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return  TVerticalImageText(image: TImages.shoeIcon, title: "Shoes",onTap: () => Get.to(() =>SubCategoriesScreen()) ,);
+          return  TVerticalImageText(image: TImages.shoeIcon, title: "Shoes",onTap: () => Get.to(() =>const SubCategoriesScreen()) ,);
         },
       ),
     );
