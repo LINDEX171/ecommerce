@@ -11,14 +11,14 @@ class AllProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(title: Text("Popular Products"), showBackArrow: true),
+      appBar: const TAppBar(title: Text("Popular Products"), showBackArrow: true),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(children: [
             ///Dropdown
             DropdownButtonFormField(
-              decoration: InputDecoration(prefixIcon: Icon(Iconsax.sort)),
+              decoration: const InputDecoration(prefixIcon: Icon(Iconsax.sort)),
               items: [
                "Name",
                 "Higher Price",
@@ -30,7 +30,7 @@ class AllProducts extends StatelessWidget {
               onChanged: (value) {},
             ),
             ///Products
-            TGridLayout(itemCount: 10, itemBuilder: (_, index) => TProductCardVertical(),)
+            TGridLayout(itemCount: 10, itemBuilder: (_, index) => const TProductCardVertical(),)
           ]),
         ),
       ),

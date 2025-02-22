@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   ///Heading
-                  TSectionHeading(title: "Popular product",onPressed: () => Get.to(() =>AllProducts()),),
+                  TSectionHeading(title: "Popular product",onPressed: () => Get.to(() =>const AllProducts()),),
                   const SizedBox(height: TSizes.spaceBtwSections,),
 
                   ///GRiedview PROductcard
