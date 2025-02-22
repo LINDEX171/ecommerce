@@ -3,11 +3,13 @@ import 'package:ecommerce/common/widgets/custom_shapes/containers/search_contain
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/products_cart/product_card_vertical.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
+import 'package:ecommerce/features/shop/screens/all_products/all_products.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -77,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   ///Heading
-                  TSectionHeading(title: "Popular product",onPressed: () {},),
+                  TSectionHeading(title: "Popular product",onPressed: () => Get.to(() =>AllProducts()),),
                   const SizedBox(height: TSizes.spaceBtwSections,),
 
                   ///GRiedview PROductcard
