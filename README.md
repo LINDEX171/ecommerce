@@ -6,3 +6,5 @@
 ![Image](https://github.com/user-attachments/assets/c9cc6ca1-a28b-43a4-9d07-b736366bebce)
 
 ![Image](https://github.com/user-attachments/assets/be5bfe9a-a3ea-4ae1-9209-72dcc9482053)
+
+This repository contains a modern, scalable, and reusable E-Commerce application built with Flutter. It follows Clean Architecture, ensuring a structured, maintainable, and testable codebase.
