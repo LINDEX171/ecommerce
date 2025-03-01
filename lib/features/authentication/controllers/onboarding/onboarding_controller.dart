@@ -1,6 +1,8 @@
 import 'package:ecommerce/features/authentication/screens/login/login.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class OnBoardingController extends GetxController{
 
@@ -23,6 +25,18 @@ class OnBoardingController extends GetxController{
   ///update Current index & jump to next page
   void nextPage(){
      if(currentPageIndex == 2){
+       final storage = GetStorage();
+
+       if(kDebugMode){
+         print("========================= Get Srotage  Next button ====================");
+         print(storage.read("IsFirstTime"));
+       }
+       storage.write("IsFirstTime", false);
+       if(kDebugMode){
+         print("========================= Get Srotage  Next button ====================");
+         print(storage.read("IsFirstTime"));
+       }
+
          Get.offAll(const LoginScreen());
      }else{
        int page = currentPageIndex.value + 1;
