@@ -1,4 +1,4 @@
-This repository contains a modern, scalable, and reusable E-Commerce application built with Flutter. It follows Clean Architecture, ensuring a structured, maintainable, and testable codebase.
+This repository contains a modern, scalable, and reusable E-Commerce application built with Flutter, It follows Clean Architecture, ensuring a structured, maintainable, and testable codebase.
 
 # ecommerce APP flutter
 
